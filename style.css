@@ -1,0 +1,33 @@
+body {
+    background-color: gray;
+}
+
+h1 {
+    color: lime;
+    font-family: Arial Helvetica;
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+/* unvisited link */
+a:link {
+    color: limegreen;
+}
+
+/* visited link */
+a:visited {
+    color: darkgreen;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: green;
+}

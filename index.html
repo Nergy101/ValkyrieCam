@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> <!-- import style.css file -->
+</head>
+<body>
+  <h1 align="center" style="font-size:10vw">Footage</h1>
+  <p align="center" ><img src="screen.jpg" id="myImage" /> </p> <!-- Image box -->
+
+  <p align="center" ><a href="screen.jpg" download="foto.jpg">ManualDownload</a></p> <!-- Manual download link -->
+
+
+    <!-- De download locatie vd Raspberry moet vervangen worden door de "project/images" map -->
+  <p align="center"><a  href="images" target="_blank">Click here to view "images" Folder</a></p> <!-- Go to images directory -->
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> // import google Jquery library</script>
+
+<script>
+
+var a = $("<a>").attr("href", "screen.jpg").attr("download", "images/foto.png").appendTo("body");
+//a.remove(); // remove downloading link
+
+//
+// setInterval(function() {
+//   var myImageElement = $('#myImage');
+//   myImageElement.src = 'screen.jpg?rand=' + Math.random(); // make sure the browser takes the new image
+//   a[0].click(); // do the download link
+// }, 5000); // 5 seconds (5000ms)
+//
+
+</script>
+</html>
