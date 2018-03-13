@@ -25,13 +25,13 @@ var a = $("<a>").attr("href", "screen.jpg").attr("download", "images/foto.png").
 
 // function below does the refresh+download imgs
 
-//
-// setInterval(function() {
-//   var myImageElement = $('#myImage');
-//   myImageElement.src = 'screen.jpg?rand=' + Math.random(); // make sure the browser takes the new image
-//   a[0].click(); // do the download link
-// }, 5000); // 5 seconds (5000ms)
-//
+
+setInterval(function() {
+  var myImageElement = $('#myImage');
+  myImageElement.src = 'screen.jpg?rand=' + Math.random(); // make sure the browser takes the new image
+  a[0].click(); // do the download link
+}, 5000); // 5 seconds (5000ms)
+
 
 </script>
 </html>
