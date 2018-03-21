@@ -39,15 +39,22 @@ var a = $("<a>").attr("href", "screen.jpg").attr("download", "images/foto.png").
 //   myImageElement.src = 'screen.jpg?rand=' + Math.random(); // make sure the browser takes the new image
 //   a[0].click(); // do the download link
 // }, 5000); // 5 seconds (5000ms)
+
+var rain= "3h"
 $( document ).ready(function() {
   $.get( "http://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad", function( data ) {
     var gradenC = Math.round( (data.list[0].main.temp -272.15) * 100) / 100
     //alert( "Data Loaded: " + data.city.name +', '+data.city.country+', '+ gradenC );
     //document.getElementById("Locatie").innerHTML = "Data Loaded: " + data.city.name +', '+data.city.country+', '+ gradenC ;
-    $("#Location").val("Location Loaded: " + data.city.name +', '+data.city.country+', '+ gradenC+" degrees Celcius \n"+
-      data.list[0].rain.3h+', '+data.list[0].wind.speed+', '+data.list[0].weather[0].description);
+    $("#Location").val("Date and Time: "+ data.list[0].dt_txt +'\n'+
+      "Location Loaded: " + data.city.name +', '+data.city.country+
+      '\nWeather: '+data.list[0].weather[0].description+
+      ', Degrees: '+ gradenC+'°'+
+       "\nWind speed: " + data.list[0].wind.speed+
+     ',\nLat: '+data.city.coord.lat+' Lon: '+data.city.coord.lon);
   });
 });
+
 
 </script>
 </html>
