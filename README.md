@@ -2,6 +2,7 @@
 We are going to (re)build a kind of (web based) ValkyrieCam
 
 TO-DO:
+
 -deploy to heroku
 
 -Assamble the raspberry and program it
