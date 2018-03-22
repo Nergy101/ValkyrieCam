@@ -61,25 +61,9 @@ setInterval(function() {
 //   a[0].click(); // do the download link
 // }, 5000); // 5 seconds (5000ms)
 
-function startup(){
-  $.get( "https://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad", function( data ) {
-    console.log("test");
-    if(data == "") throw "No data loaded";
-
-    //var gradenC = Math.round( (data.list[0].main.temp -272.15) * 100) / 100
-    //$("#messageBox").text( "Data Loaded Succesfully");
-    $("#Location").val("Date and Time: "+ data.list[0].dt_txt +'\n'+
-      "Location Loaded: " + data.city.name +', '+data.city.country+
-      '\nWeather: '+data.list[0].weather[0].description+
-      ', '+ gradenC+'°C'+
-       "\nWind speed: " + data.list[0].wind.speed+
-     '\nLat: '+data.city.coord.lat+' Lon: '+data.city.coord.lon);
-  });
-}
-
 $( document ).ready(function() {
   $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad",
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad",
 
             type: "GET",
 
