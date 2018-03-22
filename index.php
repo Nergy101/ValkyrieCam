@@ -42,7 +42,7 @@ setInterval(function() {
   var ping = new Date;
   console.log("Ping send");
   $.ajax({ type: "POST",
-      url: "http://<your app name>.herokuapp.com",
+      url: "https://pcvalkyrie.herokuapp.com/",
       data: {Ping: "ping"},
       cache:false,
       success: function(output){
@@ -62,7 +62,7 @@ setInterval(function() {
 // }, 5000); // 5 seconds (5000ms)
 
 function startup(){
-  $.get( "http://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad", function( data ) {
+  $.get( "https://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad", function( data ) {
     console.log("test");
     if(data == "") throw "No data loaded";
 
