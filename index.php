@@ -64,7 +64,7 @@ setInterval(function() {
 
 $( document ).ready(function() {
   $.ajax({
-            url: "http://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad",
+            url: "https://api.openweathermap.org/data/2.5/forecast?id=2745912&APPID=3e7479392874b48638d0847329f31fad",
 
             type: "GET",
 
