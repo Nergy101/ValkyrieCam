@@ -42,19 +42,17 @@ setInterval(function() {
   var ping = new Date;
   console.log("Page refreshed");
   //location.reload();
-  // $.ajax({ type: "GET",
-  //     url: "http://pcvalkyrie.herokuapp.com/",
-  //     data: {Ping: "ping"},
-  //     cache:false,
-  //     success: function(output){
-  //
-  //         ping = new Date - ping;
-  //
-  //     }
-  // });
-}, 18000000); // 300000 = 5 minutes    18000000 = 5uur
+  $.ajax({ type: "GET",
+      url: "https://pcvalkyrie.herokuapp.com/",
+      data: {Ping: "ping"},
+      cache:false,
+      success: function(output){
 
+          ping = new Date - ping;
 
+      }
+  });
+}, 1800); //0000); // 300000 = 5 minutes    18000000 = 5uur
 
 // setInterval(function() {
 //   var myImageElement = $('#myImage');
